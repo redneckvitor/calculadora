@@ -1,3 +1,13 @@
+$button-color: rgb(44, 44, 48);
+$background-color: #141414;
+$page-background-color: #505050;
+$primary-color: #109010;
+$operator-button-color: #b0fd59;
+$results-button-color: #50dd0e;
+
+$button-font: "Roboto Mono", monospace;
+$margem: 28%;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,11 +19,69 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  align-items: center;
+
+  background-color: $page-background-color;
 }
 
 .container {
-  width: 30%;
-  background-color: blue;
+  width: $margem;
   height: 100vh;
+
+  background-color: $background-color;
+  box-shadow: 0px 10px 74px -13px rgba(0, 0, 0, 0.8);
+}
+
+.calc-display {
+  border: 1px solid white;
+  min-height: 33.33333vh;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  min-height: 66vh;
+  padding: 5%;
+
+  div.button-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+
+    font-family: $button-font;
+    font-size: 55px;
+    font-weight: 300;
+    color: white;
+
+    display: block;
+
+    border-radius: 25%;
+    background-color: $button-color;
+    border: none;
+
+    transition: 0.3s;
+
+    &:hover {
+    }
+
+    &:active {
+      transition: 0.3s;
+      font-size: 40px;
+      background-color: #353535;
+    }
+  }
+
+  .operator-button {
+    color: $operator-button-color;
+  }
+
+  #results-button {
+    background-color: $results-button-color;
+  }
 }
