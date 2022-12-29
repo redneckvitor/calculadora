@@ -1,12 +1,12 @@
-$button-color: rgb(44, 44, 48);
-$background-color: #141414;
-$page-background-color: #505050;
+$button-color: #2c2c30;
+$background-color: #14141c;
+$page-background-color: $button-color;
 $primary-color: #109010;
 $operator-button-color: #b0fd59;
 $results-button-color: #50dd0e;
 
 $button-font: "Roboto Mono", monospace;
-$margem: 28%;
+$desktop-calculator-size: 28%;
 
 * {
   box-sizing: border-box;
@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  width: $margem;
+  width: $desktop-calculator-size;
   height: 100vh;
 
   background-color: $background-color;
@@ -33,8 +33,31 @@ body {
 }
 
 .calc-display {
-  border: 1px solid white;
   min-height: 33.33333vh;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .display {
+    background-color: $button-color;
+    width: 90%;
+
+    min-height: 22vh;
+    border-radius: 0.4em;
+    font-size: 6em;
+    font-family: $button-font;
+    color: white;
+    text-align: right;
+    padding: 5%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    box-shadow: black 0px 7px 10px 0px;
+  }
 }
 
 .calc-buttons {
@@ -55,25 +78,28 @@ body {
     height: 100%;
 
     font-family: $button-font;
-    font-size: 55px;
-    font-weight: 300;
+    font-size: 2.4em;
+    font-weight: 400;
     color: white;
 
     display: block;
 
     border-radius: 25%;
     background-color: $button-color;
-    border: none;
+    border: 3px solid transparent;
 
     transition: 0.3s;
 
+    box-shadow: black 0px 7px 10px 0px;
+
     &:hover {
+      border: 3px solid lighten($button-color, $amount: 10%);
     }
 
     &:active {
       transition: 0.3s;
-      font-size: 40px;
-      background-color: #353535;
+      font-size: 2.2em;
+      background-color: lighten($button-color, 10%);
     }
   }
 
