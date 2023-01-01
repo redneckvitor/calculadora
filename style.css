@@ -89,7 +89,7 @@ body {
     width: 100%;
   }
 }
-@media only screen and (max-aspect-ratio: 1/2) and (orientation: portrait) {
+@media only screen and (max-aspect-ratio: 1/2.2) and (orientation: portrait) {
   .calc-display {
     min-height: 33.33333vh;
   }
