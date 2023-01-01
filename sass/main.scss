@@ -4,8 +4,9 @@ $page-background-color: $button-color;
 $primary-color: #109010;
 $operator-button-color: #b0fd59;
 $results-button-color: #50dd0e;
+$clear-button-color: rgb(231, 108, 108);
 
-$button-font: "Roboto Mono", monospace;
+$button-font: "Poppins", sans-serif;
 $desktop-calculator-size: 28%;
 
 $element-shadow: black 0px 7px 10px 0px;
@@ -34,7 +35,7 @@ body {
   box-shadow: 0px 10px 74px -13px rgba(0, 0, 0, 0.8);
 }
 
-.calc-display {
+.calculator-display {
   min-height: 33.33333vh;
 
   width: 100%;
@@ -62,7 +63,7 @@ body {
   }
 }
 
-.calc-buttons {
+.calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -112,6 +113,10 @@ body {
   #results-button {
     background-color: $results-button-color;
   }
+
+  #clear-button {
+    color: $clear-button-color;
+  }
 }
 
 @media only screen and (min-device-width: 280px) and (orientation: portrait) {
@@ -120,8 +125,8 @@ body {
   }
 }
 
-@media only screen and (max-aspect-ratio: 1/2.3) and (orientation: portrait) {
-  .calc-display {
+@media only screen and (max-aspect-ratio: 1/1.8) and (orientation: portrait) {
+  .calculator-display {
     min-height: 33.33333vh;
 
     .display {
@@ -133,10 +138,13 @@ body {
     }
   }
 
-  .calc-buttons {
+  .calculator-buttons {
     padding-top: 2.5vh;
     padding-right: 2.5vh;
     padding-left: 2.5vh;
-    padding-bottom: 13vh;
+    padding-bottom: 15.5vh;
   }
 }
+
+//A11 1560 / 720 = 2.1666
+//IPhone 5: 568 / 320 =
